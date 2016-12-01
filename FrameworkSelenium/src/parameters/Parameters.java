@@ -2,13 +2,37 @@ package parameters;
 
 public class Parameters {
 
-	public static String ieWebDriverPath = "D:\\ProjetosEclipse\\chromedriver.exe";
-	public static String chromeWebDriverPath = "D:\\ProjetosEclipse\\IEDriverServer.exe";
+	public static String ieWebDriverPath = "D:\\chromedriver.exe";
+	public static String chromeWebDriverPath = "D:\\IEDriverServer.exe";
 	
 	public static String pathScreenshots = "D:\\Log\\";
 	public static String pathErrorScreenshots = "D:\\Log\\Erros\\";
+
+	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm", 
+		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm", 
+		"https://www.ib.bradesco.des.scopus.com.br/cartoesbradesco/loginCartao.jsf"};
+
+	/* Dados de login de Correntista */
+	public static String agency = "3982";
+	public static String account = "1115";
+	public static String digitAccount = "0";
+	public static String passwordCDigit1 = "1";
+	public static String passwordCDigit2 = "2";
+	public static String passwordCDigit3 = "1";
+	public static String passwordCDigit4 = "2";;
 	
-	public static String urlApplication = "http://www.google.com";	
+	/* Dados de login de Não Correntista */
+	public static String cpfNumber = "12";
+	public static String passwordNDigit1 = "12";
+	public static String passwordNDigit2 = "12";
+	public static String passwordNDigit3 = "12";
+	public static String passwordNDigit4 = "12";
+	
+	/* Dados de login de Não Correntista Legado */
+	public static String passwordLDigit1 = "12";
+	public static String passwordLDigit2 = "12";
+	public static String passwordLDigit3 = "12";
+	public static String passwordLDigit4 = "12";	
 	
 	public static int numberOfDatabase = 2;
 	

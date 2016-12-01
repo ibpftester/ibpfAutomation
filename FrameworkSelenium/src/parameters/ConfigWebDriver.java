@@ -29,9 +29,9 @@ public class ConfigWebDriver {
 		}
 		return driver;
 	}
-	
-	public static void acessApplication(WebDriver driver){
-		driver.get(Parameters.urlApplication);
+
+	public static void acessApplication(WebDriver driver, int idUrlList){
+		driver.get(Parameters.urlApplication[idUrlList]);
 	}
 	
 }

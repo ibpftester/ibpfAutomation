@@ -1,3 +1,20 @@
-2016-10-25 21:02:02.024 [main] INFO  common.LogRegister - ****************************************************************************************
-2016-10-25 21:02:02.043 [main] INFO  common.LogRegister - $$$$$$$$$$$$$$$$$$$$$$           teste           $$$$$$$$$$$$$$$$$$$$$$
-2016-10-25 21:02:02.043 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:28.721 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:28.724 [main] INFO  common.LogRegister - $$$$$$$$$$$$$$$$$$$$$$           Login           $$$$$$$$$$$$$$$$$$$$$$
+2016-12-01 16:09:28.725 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:28.725 [main] INFO  common.LogRegister - Informa agência.
+2016-12-01 16:09:29.001 [main] INFO  common.LogRegister - Informa número da conta.
+2016-12-01 16:09:29.169 [main] INFO  common.LogRegister - Informa dígito da conta.
+2016-12-01 16:09:29.319 [main] INFO  common.LogRegister - Clica no botão 'Entra'.
+2016-12-01 16:09:32.053 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:32.054 [main] INFO  common.LogRegister - XXXXXXXXXXXXXXXXXXXX               -E---N---D-               XXXXXXXXXXXXXXXXXXXX
+2016-12-01 16:09:32.054 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:32.296 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:32.296 [main] INFO  common.LogRegister - $$$$$$$$$$$$$$$$$$$$$$           InformPassword           $$$$$$$$$$$$$$$$$$$$$$
+2016-12-01 16:09:32.296 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-01 16:09:32.296 [main] INFO  common.LogRegister - Informa o dígito 1 da senha.
+2016-12-01 16:09:32.463 [main] INFO  common.LogRegister - Informa o dígito 2 da senha.
+2016-12-01 16:09:32.622 [main] INFO  common.LogRegister - Informa o dígito 3 da senha.
+2016-12-01 16:09:33.111 [main] INFO  common.LogRegister - Informa o dígito 4 da senha.
+2016-12-01 16:09:38.421 [main] INFO  common.LogRegister - Clica na opção afirmando que não recebeu o cartão.
+2016-12-01 16:09:40.879 [main] ERROR common.LogRegister - Eror:[Ljava.lang.StackTraceElement;@75e76a
+2016-12-01 16:09:40.879 [main] ERROR common.LogRegister - Eror:[Ljava.lang.StackTraceElement;@124cca1
