@@ -22,11 +22,11 @@ public class Parameters {
 	public static String passwordCDigit4 = "2";;
 	
 	/* Dados de login de Não Correntista */
-	public static String cpfNumber = "12";
-	public static String passwordNDigit1 = "12";
-	public static String passwordNDigit2 = "12";
-	public static String passwordNDigit3 = "12";
-	public static String passwordNDigit4 = "12";
+	public static String cpfNumber = "18781088914";
+	public static String passwordNDigit1 = "1";
+	public static String passwordNDigit2 = "2";
+	public static String passwordNDigit3 = "1";
+	public static String passwordNDigit4 = "2";
 	
 	/* Dados de login de Não Correntista Legado */
 	public static String passwordLDigit1 = "12";

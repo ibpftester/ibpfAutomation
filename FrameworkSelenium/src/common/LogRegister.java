@@ -16,8 +16,8 @@ public class LogRegister {
 
 	public static void endTestCase() {
 		log.info("****************************************************************************************");
-		log.info("XXXXXXXXXXXXXXXXXXXX               " + "-E---N---D-"
-				+ "               XXXXXXXXXXXXXXXXXXXX");
+		log.info("XXXXXXXXXXXXXXXXXXXX              " + "-E--N--D-"
+				+ "              XXXXXXXXXXXXXXXXXXXX");
 		log.info("****************************************************************************************");
 	}
 

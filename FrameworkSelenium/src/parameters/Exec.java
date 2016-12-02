@@ -4,18 +4,18 @@ import org.junit.Test;
 
 import common.LogRegister;
 import pages.AccountantLogin;
+import pages.NotAccountantLoginPassword;
 
 public class Exec {
-
 
 	@Test
 	public void teste() throws Exception{
 		
 		try{
-			AccountantLogin.Start();
-			AccountantLogin.Login();
-			AccountantLogin.InformPassword();
-			AccountantLogin.End();		
+			NotAccountantLoginPassword.Start();
+			NotAccountantLoginPassword.Login();
+			NotAccountantLoginPassword.InformPassword();
+			NotAccountantLoginPassword.End();		
 		}
 
 		catch(Exception e){
