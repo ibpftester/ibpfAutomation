@@ -1,17 +1,23 @@
 package parameters;
 
-public class Parameters {
+import org.openqa.selenium.WebDriver;
 
+public class Parameters {
+	
+	public static boolean controllerFailure = true;
+	
 	public static String ieWebDriverPath = "D:\\chromedriver.exe";
 	public static String chromeWebDriverPath = "D:\\IEDriverServer.exe";
 	
 	public static String pathScreenshots = "D:\\Log\\";
 	public static String pathErrorScreenshots = "D:\\Log\\Erros\\";
 
-	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm", 
-		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm", 
+	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm.", 
+		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm.", 
 		"https://www.ib.bradesco.des.scopus.com.br/cartoesbradesco/loginCartao.jsf"};
 
+	public static WebDriver driver = ConfigWebDriver.selectWebDriver(2);
+	
 	/* Dados de login de Correntista */
 	public static String agency = "3982";
 	public static String account = "1115";
@@ -28,12 +34,6 @@ public class Parameters {
 	public static String passwordNDigit3 = "1";
 	public static String passwordNDigit4 = "2";
 	
-	/* Dados de login de Não Correntista Legado */
-	public static String passwordLDigit1 = "12";
-	public static String passwordLDigit2 = "12";
-	public static String passwordLDigit3 = "12";
-	public static String passwordLDigit4 = "12";	
-	
 	public static int numberOfDatabase = 2;
 	
 	public static String[] vSgbd = {"0", "0"}; //(0 - Sql Server; 1 - MySql; 2 - Oracle)
@@ -42,5 +42,4 @@ public class Parameters {
 	public static String[] vDataBaseName = {"db_test", "db_test2"};
 	public static String[] vUserName = {"root", "root2"};
 	public static String[] vPassword = {"123456", "123457"};
-		
 }
