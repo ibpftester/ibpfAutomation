@@ -13,8 +13,8 @@ public class Parameters {
 	public static String pathScreenshots = "D:\\Log\\";
 	public static String pathErrorScreenshots = "D:\\Log\\Erros\\";
 
-	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm.", 
-		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm.", 
+	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm", 
+		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm", 
 		"https://www.ib.bradesco.des.scopus.com.br/cartoesbradesco/loginCartao.jsf"};
 
 	public static WebDriver driver = ConfigWebDriver.selectWebDriver(2);

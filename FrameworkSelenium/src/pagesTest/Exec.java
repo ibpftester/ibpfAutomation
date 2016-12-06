@@ -1,25 +1,20 @@
 package pagesTest;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
 
 import common.LogRegister;
 import pages.AccountantLogin;
 import pages.NotAccountantLogin;
 import parameters.ConfigWebDriver;
+import parameters.Parameters;
 
 public class Exec {
 	
 	WebDriver driver = ConfigWebDriver.selectWebDriver(2);
 	
-	@Before
-	public void Start(){
-		ConfigWebDriver.acessApplication(driver, 1);
-	}	
-	
-	@Test
+	@Test(priority=1)
 	public void teste() throws Exception{
 		try{
 			NotAccountantLogin.InformCpfNumber();
@@ -32,7 +27,7 @@ public class Exec {
 		}
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void teste2() throws Exception{
 		try{			
 			AccountantLogin.InformAccount();
@@ -43,9 +38,10 @@ public class Exec {
 			LogRegister.error("Eror:" + e.getStackTrace());
 			throw(e);
 		}
+		Parameters.controllerEnd = true;
 	}
 	
-	@After
+	@AfterTest
 	public void Close(){	    
 	    driver.quit();
 	    ConfigWebDriver.endApplication();
