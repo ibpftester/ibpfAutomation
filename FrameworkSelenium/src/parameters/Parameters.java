@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class Parameters {
 	
 	public static boolean controllerFailure = true;
+	public static boolean controllerEnd = false;
 	
 	public static String ieWebDriverPath = "D:\\chromedriver.exe";
 	public static String chromeWebDriverPath = "D:\\IEDriverServer.exe";

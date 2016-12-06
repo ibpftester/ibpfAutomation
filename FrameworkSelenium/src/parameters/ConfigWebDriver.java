@@ -1,9 +1,13 @@
 package parameters;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import common.LogRegister;
 
 public class ConfigWebDriver {
 		
@@ -33,5 +37,17 @@ public class ConfigWebDriver {
 	public static void acessApplication(WebDriver driver, int idUrlList){
 		driver.get(Parameters.urlApplication[idUrlList]);
 	}
+	
+	public static void endApplication(){
+	    if(Parameters.controllerEnd == true){
+			try {
+				Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+			} catch (IOException e) {
+				LogRegister.error("Eror:" + e.getStackTrace());
+			}	    	
+	    }
+	    Parameters.controllerEnd = false;
+	}
+
 	
 }
