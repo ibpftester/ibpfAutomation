@@ -35,7 +35,8 @@ public class ConfigWebDriver {
 	}
 
 	public static void acessApplication(WebDriver driver, int idUrlList){
-		driver.get(Parameters.urlApplication[idUrlList]);
+		driver.get(Parameters.urlApplication[idUrlList]);		
+		driver.manage().window().maximize();
 	}
 	
 	public static void endApplication(){

@@ -27,19 +27,19 @@ public class Exec {
 		}
 	}
 	
-	@Test(priority=2)
-	public void teste2() throws Exception{
-		try{			
-			AccountantLogin.InformAccount();
-			AccountantLogin.InformPassword();	
-		}
-
-		catch(Exception e){
-			LogRegister.error("Eror:" + e.getStackTrace());
-			throw(e);
-		}
-		Parameters.controllerEnd = true;
-	}
+//	@Test(priority=2)
+//	public void teste2() throws Exception{
+//		try{			
+//			AccountantLogin.InformAccount();
+//			AccountantLogin.InformPassword();	
+//		}
+//
+//		catch(Exception e){
+//			LogRegister.error("Eror:" + e.getStackTrace());
+//			throw(e);
+//		}
+//		Parameters.controllerEnd = true;
+//	}
 	
 	@AfterTest
 	public void Close(){	    
