@@ -5,19 +5,19 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 import common.LogRegister;
-import pages.AccountantLogin;
+import pages.NotAccLogin;
 import parameters.ConfigWebDriver;
 import parameters.Parameters;
 
-public class TestAccountantLogin {
+public class TestNotAccLogin {
 
 	WebDriver driver = ConfigWebDriver.selectWebDriver(2);
 
 	@Test
-	public void RunTestAccountantLogin() throws Exception{
+	public void RunTestNotAccountantLogin() throws Exception{
 		try{
-			AccountantLogin.InformAccount();
-			AccountantLogin.InformPassword();
+			NotAccLogin.InformCpfNumber();
+			NotAccLogin.InformPassword();
 		}
 		catch(Exception e){
 			LogRegister.error("Eror:" + e.getStackTrace());

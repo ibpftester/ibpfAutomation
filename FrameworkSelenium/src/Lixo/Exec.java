@@ -5,8 +5,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import common.LogRegister;
-import pages.AccountantLogin;
-import pages.NotAccountantLogin;
+import pages.AccLogin;
+import pages.NotAccLogin;
 import parameters.ConfigWebDriver;
 import parameters.Parameters;
 
@@ -17,8 +17,8 @@ public class Exec {
 	@Test(priority=1)
 	public void TestNotAccountantLogin() throws Exception{
 		try{
-			NotAccountantLogin.InformCpfNumber();
-			//NotAccountantLogin.InformPassword();	
+			NotAccLogin.InformCpfNumber();
+			NotAccLogin.InformPassword();	
 		}
 
 		catch(Exception e){
@@ -30,8 +30,8 @@ public class Exec {
 	@Test(priority=2)
 	public void TestAccountantLogin() throws Exception{
 		try{			
-			AccountantLogin.InformAccount();
-			//AccountantLogin.InformPassword();	
+			AccLogin.InformAccount();
+			AccLogin.InformPassword();	
 		}
 
 		catch(Exception e){

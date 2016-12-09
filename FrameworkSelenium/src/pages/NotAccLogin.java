@@ -14,7 +14,7 @@ import parameters.ConfigWebDriver;
 import parameters.Parameters;
 import rules.ScreenCaptureRule;
 
-public class NotAccountantLogin {
+public class NotAccLogin {
 
 	static WebDriver driver = Parameters.driver;
 	static WebDriverWait wait = new WebDriverWait(driver, 90);
