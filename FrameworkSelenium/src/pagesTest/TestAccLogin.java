@@ -1,8 +1,8 @@
 package pagesTest;
 
-import org.junit.After;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
 
 import common.LogRegister;
 import pages.AccLogin;
@@ -26,7 +26,7 @@ public class TestAccLogin {
 		Parameters.controllerEnd = true;
 	}
 
-	@After
+	@AfterTest
 	public void Close(){
 	    driver.quit();
 	    ConfigWebDriver.endApplication();

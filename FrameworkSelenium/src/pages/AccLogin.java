@@ -99,7 +99,6 @@ public class AccLogin {
 				try{
 					LogRegister.startTestCase();
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='" + Parameters.passwordCDigit1 + "']")));
-					ScreenCapture.takePrintScreen();
 					LogRegister.info("Informa o dígito 1 da senha.");
 					digit1PasswordButton.click();
 					LogRegister.info("Informa o dígito 2 da senha.");

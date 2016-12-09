@@ -89,7 +89,6 @@ public class NotAccLogin {
 
 				try{
 					LogRegister.startTestCase();
-					ScreenCapture.takePrintScreen();
 					LogRegister.info("Informa o dígito 1 da senha.");
 					digit1PasswordButton.click();
 					LogRegister.info("Informa o dígito 2 da senha.");
