@@ -1,4 +1,4 @@
-package Lixo;
+package suitTests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -10,10 +10,9 @@ import pages.NotAccLogin;
 import parameters.ConfigWebDriver;
 import parameters.Parameters;
 
-public class Exec {
-	
+public class SuitLogin {
 	WebDriver driver = ConfigWebDriver.selectWebDriver(2);
-	
+
 	@Test(priority=1)
 	public void TestNotAccountantLogin() throws Exception{
 		try{
@@ -46,6 +45,4 @@ public class Exec {
 	    driver.quit();
 	    ConfigWebDriver.endApplication();
 	}
-
 }
-
