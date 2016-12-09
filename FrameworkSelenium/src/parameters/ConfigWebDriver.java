@@ -10,11 +10,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import common.LogRegister;
 
 public class ConfigWebDriver {
-		
+
 	public static WebDriver selectWebDriver(int option){
-		
+
 		WebDriver driver = null;
-		
+
 		switch (option) {
 		case 0:
 			driver = new FirefoxDriver();
@@ -25,7 +25,7 @@ public class ConfigWebDriver {
 			break;
 		case 2:
 			System.setProperty("webdriver.ie.driver", Parameters.chromeWebDriverPath);
-			driver = new InternetExplorerDriver(); 
+			driver = new InternetExplorerDriver();
 			break;
 		default:
 			System.out.println("Error: 'ConfigWebDriver.selectWebDriver()'\nBrowser unknown! Enter 0 (Firefox), 1 (Chrome) or 2 (Internet Explorer)");
@@ -35,20 +35,18 @@ public class ConfigWebDriver {
 	}
 
 	public static void acessApplication(WebDriver driver, int idUrlList){
-		driver.get(Parameters.urlApplication[idUrlList]);		
+		driver.get(Parameters.urlApplication[idUrlList]);
 		driver.manage().window().maximize();
 	}
-	
+
 	public static void endApplication(){
 	    if(Parameters.controllerEnd == true){
 			try {
 				Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
 			} catch (IOException e) {
 				LogRegister.error("Eror:" + e.getStackTrace());
-			}	    	
+			}
 	    }
 	    Parameters.controllerEnd = false;
 	}
-
-	
 }

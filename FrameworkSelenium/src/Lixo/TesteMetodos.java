@@ -1,4 +1,4 @@
-package parameters;
+package Lixo;
 
 import java.awt.AWTException;
 import java.awt.HeadlessException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import common.ScreenCapture;
 
-public class Teste {
+public class TesteMetodos {
 
 	public static void main(String[] args) throws HeadlessException, AWTException, IOException {
 		

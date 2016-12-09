@@ -23,14 +23,13 @@ public class Parameters {
 	public static String agency = "3982";
 	public static String account = "1115";
 	public static String digitAccount = "0";
-	public static String passwordCDigit1 = "4";
+	public static String passwordCDigit1 = "1";
 	public static String passwordCDigit2 = "2";
 	public static String passwordCDigit3 = "1";
 	public static String passwordCDigit4 = "2";;
 	
 	/* Dados de login de Não Correntista */
-	public static String cpfNumber = "10420427643";
-	//public static String cpfNumber = "18781088914";
+	public static String cpfNumber = "18781088914";
 	public static String passwordNDigit1 = "1";
 	public static String passwordNDigit2 = "2";
 	public static String passwordNDigit3 = "1";

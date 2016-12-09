@@ -1,4 +1,4 @@
-package pagesTest;
+package Lixo;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -15,10 +15,10 @@ public class Exec {
 	WebDriver driver = ConfigWebDriver.selectWebDriver(2);
 	
 	@Test(priority=1)
-	public void teste() throws Exception{
+	public void TestNotAccountantLogin() throws Exception{
 		try{
 			NotAccountantLogin.InformCpfNumber();
-			NotAccountantLogin.InformPassword();	
+			//NotAccountantLogin.InformPassword();	
 		}
 
 		catch(Exception e){
@@ -27,19 +27,19 @@ public class Exec {
 		}
 	}
 	
-//	@Test(priority=2)
-//	public void teste2() throws Exception{
-//		try{			
-//			AccountantLogin.InformAccount();
-//			AccountantLogin.InformPassword();	
-//		}
-//
-//		catch(Exception e){
-//			LogRegister.error("Eror:" + e.getStackTrace());
-//			throw(e);
-//		}
-//		Parameters.controllerEnd = true;
-//	}
+	@Test(priority=2)
+	public void TestAccountantLogin() throws Exception{
+		try{			
+			AccountantLogin.InformAccount();
+			//AccountantLogin.InformPassword();	
+		}
+
+		catch(Exception e){
+			LogRegister.error("Eror:" + e.getStackTrace());
+			throw(e);
+		}
+		Parameters.controllerEnd = true;
+	}
 	
 	@AfterTest
 	public void Close(){	    
