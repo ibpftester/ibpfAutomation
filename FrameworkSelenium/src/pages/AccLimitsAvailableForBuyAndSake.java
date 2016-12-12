@@ -1,0 +1,50 @@
+package pages;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import common.LogRegister;
+import common.ScreenCapture;
+import parameters.Parameters;
+import rules.ScreenCaptureRule;
+
+public class AccLimitsAvailableForBuyAndSake {
+
+	static WebDriver driver = Parameters.driver;
+	static WebDriverWait wait = new WebDriverWait(driver, 300);
+
+	@Rule
+	public ScreenCaptureRule screenCapture = new ScreenCaptureRule();
+
+	@Test
+	public static void SelectLimitsAvailableForBuyAndSake() throws Exception{
+
+		if (Parameters.controllerFailure == true){
+			if(driver.findElements(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']")).size() == 0){
+				ScreenCapture.takePrintScreen();
+				LogRegister.info("Atenção: A funcionalidade 'Limites Disponíveis para Compra e Saque' não está disponível.");
+				Parameters.controllerFailure = false;
+			}
+
+			else{
+				WebElement linkLimitsAvailableForBuyAndSake = driver.findElement(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']"));
+
+				LogRegister.startTestCase();
+				LogRegister.info("Seleciona a funcionalidade 'Limites Disponíveis para Compra e Saque'.");
+				linkLimitsAvailableForBuyAndSake.click();
+
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='titulo_grupo_dados_formulario']")));
+
+				WebElement teste = driver.findElement(By.xpath("//a[@title='Ir para a Página Inicial']"));
+				String issoai = teste.getText();
+
+				System.out.print("Ta aqui óooo" + issoai);
+			}
+		}
+	}
+}

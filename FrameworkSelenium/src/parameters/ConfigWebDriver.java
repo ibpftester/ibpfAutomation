@@ -43,6 +43,7 @@ public class ConfigWebDriver {
 	    if(Parameters.controllerEnd == true){
 			try {
 				Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+				Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
 			} catch (IOException e) {
 				LogRegister.error("Eror:" + e.getStackTrace());
 			}

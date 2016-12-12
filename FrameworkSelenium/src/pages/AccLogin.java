@@ -54,7 +54,7 @@ public class AccLogin {
 		        LogRegister.endTestCase();
 		        Thread.sleep(3000);
 		        ScreenCapture.takePrintScreen();
-				if(driver.findElement(By.tagName("body")).getText().contains("erro")){					
+				if(driver.findElement(By.tagName("body")).getText().contains("erro") || driver.findElement(By.tagName("body")).getText().contains("Erro")){					
 					ScreenCapture.takePrintScreen();
 					LogRegister.info("Atenção: O servidor de aplicação está indisponível.");
 					Parameters.controllerFailure = false;
