@@ -48,7 +48,7 @@ public class NotAccLogin {
 		        LogRegister.endTestCase();
 		        Thread.sleep(3000);
 		        ScreenCapture.takePrintScreen();
-				if(driver.getPageSource().contains("erro")){
+				if(driver.findElement(By.tagName("body")).getText().contains("erro")){
 					ScreenCapture.takePrintScreen();
 					LogRegister.info("Atenção: O servidor de aplicação está indisponível.");
 					Parameters.controllerFailure = false;
@@ -66,12 +66,12 @@ public class NotAccLogin {
 
 		if (Parameters.controllerFailure == true){
 
-			if(driver.getPageSource().contains("O CPF informado não é válido")){
+			if(driver.findElement(By.tagName("body")).getText().contains("O CPF informado não é válido")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: A informação 'CPF' não corresponde a um não correntista válido.");
 			}
 
-			else if(driver.getPageSource().contains("indisponível")){
+			else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: O serviço de login está indisponível.");
 			}
@@ -105,22 +105,22 @@ public class NotAccLogin {
 					advanceButton.click();
 					Thread.sleep(10000);
 
-					if(driver.getPageSource().contains("Acesso Bloqueado")){
+					if(driver.findElement(By.tagName("body")).getText().contains("Acesso Bloqueado")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está bloqueada.");
 					}
 
-					else if(driver.getPageSource().contains("A Senha de 4 Dígitos não está correta")){
+					else if(driver.findElement(By.tagName("body")).getText().contains("A Senha de 4 Dígitos não está correta")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está incorreta.");
 					}
 
-					else if(driver.getPageSource().contains("indisponível")){
+					else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O serviço de login está indisponível.");
 					}
 
-					else if(driver.getPageSource().contains("CPF não cadastrado")){
+					else if(driver.findElement(By.tagName("body")).getText().contains("CPF não cadastrado")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O CPF informado não está cadastrado como um não correntista.");
 					}
@@ -129,7 +129,7 @@ public class NotAccLogin {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logo")));
 				        ScreenCapture.takePrintScreen();
 
-						if(driver.getPageSource().contains("indisponível")){
+						if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 							ScreenCapture.takePrintScreen();
 							LogRegister.info("Atenção: O serviço de login está indisponível.");
 						}

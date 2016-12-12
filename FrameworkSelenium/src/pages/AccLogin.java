@@ -54,7 +54,7 @@ public class AccLogin {
 		        LogRegister.endTestCase();
 		        Thread.sleep(3000);
 		        ScreenCapture.takePrintScreen();
-				if(driver.getPageSource().contains("erro")){
+				if(driver.findElement(By.tagName("body")).getText().contains("erro")){					
 					ScreenCapture.takePrintScreen();
 					LogRegister.info("Atenção: O servidor de aplicação está indisponível.");
 					Parameters.controllerFailure = false;
@@ -72,17 +72,17 @@ public class AccLogin {
 
 		if (Parameters.controllerFailure == true){
 
-			if(driver.getPageSource().contains("Sua senha de 4 dígitos")){
+			if(driver.findElement(By.tagName("body")).getText().contains("Sua senha de 4 dígitos")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: A senha de 4 dígitos está cancelada.");
 			}
 
-			else if(driver.getPageSource().contains("Cliente inexistente")){
+			else if(driver.findElement(By.tagName("body")).getText().contains("Cliente inexistente")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: As informações 'Agência', 'Conta' e 'Dígito' não correspondem a um correntista válido.");
 			}
 
-			else if(driver.getPageSource().contains("indisponível")){
+			else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: O serviço de login está indisponível.");
 			}
@@ -109,12 +109,12 @@ public class AccLogin {
 					digit4PasswordButton.click();
 					Thread.sleep(4000);
 
-					if(driver.getPageSource().contains("A Senha de 4 Dígitos não está correta")){
+					if(driver.findElement(By.tagName("body")).getText().contains("A Senha de 4 Dígitos não está correta")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está incorreta.");
 					}
 
-					else if(driver.getPageSource().contains("indisponível")){
+					else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O serviço de login está indisponível.");
 					}
@@ -141,7 +141,7 @@ public class AccLogin {
 				        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logo")));
 				        ScreenCapture.takePrintScreen();
 
-						if(driver.getPageSource().contains("indisponível")){
+						if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 							ScreenCapture.takePrintScreen();
 							LogRegister.info("Atenção: O serviço de login está indisponível.");
 						}
