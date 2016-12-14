@@ -24,27 +24,35 @@ public class AccLimitsAvailableForBuyAndSake {
 	@Test
 	public static void SelectLimitsAvailableForBuyAndSake() throws Exception{
 
-		if (Parameters.controllerFailure == true){
-			if(driver.findElements(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']")).size() == 0){
-				ScreenCapture.takePrintScreen();
-				LogRegister.info("Atenção: A funcionalidade 'Limites Disponíveis para Compra e Saque' não está disponível.");
-				Parameters.controllerFailure = false;
-			}
+		try{
+			if (Parameters.controllerFailure == true){
+				if(driver.findElements(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']")).size() == 0){
+					ScreenCapture.takePrintScreen();
+					LogRegister.info("Atenção: A funcionalidade 'Limites Disponíveis para Compra e Saque' não está disponível.");
+					Parameters.controllerFailure = false;
+				}
 
-			else{
-				WebElement linkLimitsAvailableForBuyAndSake = driver.findElement(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']"));
+				else{
+					WebElement linkLimitsAvailableForBuyAndSake = driver.findElement(By.partialLinkText("Limites Disponíveis para Compra e Saque"));
 
-				LogRegister.startTestCase();
-				LogRegister.info("Seleciona a funcionalidade 'Limites Disponíveis para Compra e Saque'.");
-				linkLimitsAvailableForBuyAndSake.click();
-
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='titulo_grupo_dados_formulario']")));
-
-				WebElement teste = driver.findElement(By.xpath("//a[@title='Ir para a Página Inicial']"));
-				String issoai = teste.getText();
-
-				System.out.print("Ta aqui óooo" + issoai);
+					LogRegister.startTestCase();
+					LogRegister.info("Seleciona a funcionalidade 'Limites Disponíveis para Compra e Saque'.");
+					linkLimitsAvailableForBuyAndSake.click();
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
+				}
 			}
 		}
+
+		catch(Exception e){
+			LogRegister.error("Eror:" + e.getMessage());
+			throw(e);
+		}
 	}
+
+
+
+
+//	WebElement teste = driver.findElement(By.xpath("//a[@title='Ir para a Página Inicial']"));
+//	String issoai = teste.getText();
+//	System.out.print("Ta aqui óooo" + issoai);
 }

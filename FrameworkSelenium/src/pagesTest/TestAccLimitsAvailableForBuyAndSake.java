@@ -16,7 +16,7 @@ public class TestAccLimitsAvailableForBuyAndSake {
 	WebDriver driver = ConfigWebDriver.selectWebDriver(2);
 
 	@Test
-	public void RunTestAccountantLogin() throws Exception{
+	public void RunTestAccLimitsAvailableForBuyAndSake() throws Exception{
 		try{
 			AccLogin.InformAccount();
 			AccLogin.InformPassword();
@@ -24,7 +24,7 @@ public class TestAccLimitsAvailableForBuyAndSake {
 			AccLimitsAvailableForBuyAndSake.SelectLimitsAvailableForBuyAndSake();
 		}
 		catch(Exception e){
-			LogRegister.error("Eror:" + e.getStackTrace());
+			LogRegister.error("Eror:" + e.getMessage());
 			throw(e);
 		}
 		Parameters.controllerEnd = true;

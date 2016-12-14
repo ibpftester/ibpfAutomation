@@ -61,7 +61,7 @@ public class AccLogin {
 				}
 			}
 			catch(Exception e){
-				LogRegister.error("Eror:" + e.getStackTrace());
+				LogRegister.error("Eror:" + e.getMessage());
 				throw(e);
 			}
 		}
@@ -75,16 +75,19 @@ public class AccLogin {
 			if(driver.findElement(By.tagName("body")).getText().contains("Sua senha de 4 dígitos")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: A senha de 4 dígitos está cancelada.");
+				Parameters.controllerFailure = false;
 			}
 
 			else if(driver.findElement(By.tagName("body")).getText().contains("Cliente inexistente")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: As informações 'Agência', 'Conta' e 'Dígito' não correspondem a um correntista válido.");
+				Parameters.controllerFailure = false;
 			}
 
 			else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: O serviço de login está indisponível.");
+				Parameters.controllerFailure = false;
 			}
 
 			else{
@@ -112,11 +115,13 @@ public class AccLogin {
 					if(driver.findElement(By.tagName("body")).getText().contains("A Senha de 4 Dígitos não está correta")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está incorreta.");
+						Parameters.controllerFailure = false;
 					}
 
 					else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O serviço de login está indisponível.");
+						Parameters.controllerFailure = false;
 					}
 
 					else{
@@ -144,11 +149,12 @@ public class AccLogin {
 						if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 							ScreenCapture.takePrintScreen();
 							LogRegister.info("Atenção: O serviço de login está indisponível.");
+							Parameters.controllerFailure = false;
 						}
 					}
 				}
 				catch(Exception e){
-					LogRegister.error("Eror:" + e.getStackTrace());
+					LogRegister.error("Eror:" + e.getMessage());
 					throw(e);
 				}
 			}

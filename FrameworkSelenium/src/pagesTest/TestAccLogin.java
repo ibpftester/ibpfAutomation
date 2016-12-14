@@ -20,7 +20,7 @@ public class TestAccLogin {
 			AccLogin.InformPassword();
 		}
 		catch(Exception e){
-			LogRegister.error("Eror:" + e.getStackTrace());
+			LogRegister.error("Eror:" + e.getMessage());
 			throw(e);
 		}
 		Parameters.controllerEnd = true;

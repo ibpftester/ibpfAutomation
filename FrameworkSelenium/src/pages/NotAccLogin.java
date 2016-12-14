@@ -55,7 +55,7 @@ public class NotAccLogin {
 				}
 			}
 			catch(Exception e){
-				LogRegister.error("Eror:" + e.getStackTrace());
+				LogRegister.error("Eror:" + e.getMessage());
 				throw(e);
 			}
 		}
@@ -69,11 +69,13 @@ public class NotAccLogin {
 			if(driver.findElement(By.tagName("body")).getText().contains("O CPF informado não é válido")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: A informação 'CPF' não corresponde a um não correntista válido.");
+				Parameters.controllerFailure = false;
 			}
 
 			else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: O serviço de login está indisponível.");
+				Parameters.controllerFailure = false;
 			}
 
 			else{
@@ -108,21 +110,25 @@ public class NotAccLogin {
 					if(driver.findElement(By.tagName("body")).getText().contains("Acesso Bloqueado")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está bloqueada.");
+						Parameters.controllerFailure = false;
 					}
 
 					else if(driver.findElement(By.tagName("body")).getText().contains("A Senha de 4 Dígitos não está correta")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: A senha de 4 dígitos está incorreta.");
+						Parameters.controllerFailure = false;
 					}
 
 					else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O serviço de login está indisponível.");
+						Parameters.controllerFailure = false;
 					}
 
 					else if(driver.findElement(By.tagName("body")).getText().contains("CPF não cadastrado")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O CPF informado não está cadastrado como um não correntista.");
+						Parameters.controllerFailure = false;
 					}
 
 					else{
@@ -132,12 +138,13 @@ public class NotAccLogin {
 						if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 							ScreenCapture.takePrintScreen();
 							LogRegister.info("Atenção: O serviço de login está indisponível.");
+							Parameters.controllerFailure = false;
 						}
 					}
 					LogRegister.endTestCase();
 				}
 				catch(Exception e){
-					LogRegister.error("Eror:" + e.getStackTrace());
+					LogRegister.error("Eror:" + e.getMessage());
 					throw(e);
 				}
 			}

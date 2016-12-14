@@ -21,7 +21,7 @@ public class SuitLogin {
 		}
 
 		catch(Exception e){
-			LogRegister.error("Eror:" + e.getStackTrace());
+			LogRegister.error("Eror:" + e.getMessage());
 			throw(e);
 		}
 	}
@@ -34,7 +34,7 @@ public class SuitLogin {
 		}
 
 		catch(Exception e){
-			LogRegister.error("Eror:" + e.getStackTrace());
+			LogRegister.error("Eror:" + e.getMessage());
 			throw(e);
 		}
 		Parameters.controllerEnd = true;
