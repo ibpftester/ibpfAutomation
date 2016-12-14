@@ -118,6 +118,12 @@ public class AccLogin {
 						Parameters.controllerFailure = false;
 					}
 
+					else if(driver.findElement(By.tagName("body")).getText().contains("Todas as chaves do seu cartão foram utilizadas")){
+						ScreenCapture.takePrintScreen();
+						LogRegister.info("Atenção: Todas as chaves (token) do cartão já foram utilizadas.");
+						Parameters.controllerFailure = false;
+					}
+
 					else if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 						ScreenCapture.takePrintScreen();
 						LogRegister.info("Atenção: O serviço de login está indisponível.");

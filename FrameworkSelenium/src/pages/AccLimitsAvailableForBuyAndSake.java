@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import common.BreadWay;
 import common.LogRegister;
 import common.ScreenCapture;
 import parameters.Parameters;
@@ -27,7 +28,6 @@ public class AccLimitsAvailableForBuyAndSake {
 		try{
 			if (Parameters.controllerFailure == true){
 				if(driver.findElements(By.xpath("//a[@title='Limites Disponíveis para Compra e Saque']")).size() == 0){
-					ScreenCapture.takePrintScreen();
 					LogRegister.info("Atenção: A funcionalidade 'Limites Disponíveis para Compra e Saque' não está disponível.");
 					Parameters.controllerFailure = false;
 				}
@@ -40,6 +40,7 @@ public class AccLimitsAvailableForBuyAndSake {
 					linkLimitsAvailableForBuyAndSake.click();
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
 				}
+				ScreenCapture.takePrintScreen();
 			}
 		}
 
@@ -49,10 +50,23 @@ public class AccLimitsAvailableForBuyAndSake {
 		}
 	}
 
+	@Test
+	public static void ValidateBreadWay() throws Exception{
 
+		try{
+			if (Parameters.controllerFailure == true){
+				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_0:_id64']", "Página Inicial");
+				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_1:_id71']", "Cartões");
+				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_2:_id89']", "Consultas : Limites Disponíveis para Compra e Saque");
 
+				BreadWay.ValidateBreadWayAction(driver, "Cartões", "//*[@id='conteudo']/div[2]/div[1]/h2");
+				SelectLimitsAvailableForBuyAndSake();
+			}
+		}
 
-//	WebElement teste = driver.findElement(By.xpath("//a[@title='Ir para a Página Inicial']"));
-//	String issoai = teste.getText();
-//	System.out.print("Ta aqui óooo" + issoai);
+		catch(Exception e){
+			LogRegister.error("Eror:" + e.getMessage());
+			throw(e);
+		}
+	}
 }

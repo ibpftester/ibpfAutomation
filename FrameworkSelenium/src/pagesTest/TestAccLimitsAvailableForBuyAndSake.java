@@ -22,6 +22,7 @@ public class TestAccLimitsAvailableForBuyAndSake {
 			AccLogin.InformPassword();
 			AccMenuCards.SelectTabMyCreditCards();
 			AccLimitsAvailableForBuyAndSake.SelectLimitsAvailableForBuyAndSake();
+			AccLimitsAvailableForBuyAndSake.ValidateBreadWay();
 		}
 		catch(Exception e){
 			LogRegister.error("Eror:" + e.getMessage());
