@@ -8,6 +8,10 @@
 	<classpathentry kind="lib" path="mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="lib" path="ojdbc6.jar"/>
 	<classpathentry kind="lib" path="selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="languagetool-2.0.1.jar"/>
+	<classpathentry kind="lib" path="segment-1.4.1.jar"/>
+	<classpathentry kind="lib" path="morfologik-stemming-1.7.1.jar"/>
+	<classpathentry kind="lib" path="morfologik-speller-1.7.0.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import common.LogRegister;
 import common.ScreenCapture;
+import common.SpellChecker;
 import parameters.ConfigWebDriver;
 import parameters.Parameters;
 import rules.ScreenCaptureRule;
@@ -71,7 +72,7 @@ public class AccLogin {
 	public static void InformPassword() throws Exception{
 
 		if (Parameters.controllerFailure == true){
-
+			SpellChecker.teste(driver.findElement(By.tagName("body")).getText());
 			if(driver.findElement(By.tagName("body")).getText().contains("Sua senha de 4 dígitos")){
 				ScreenCapture.takePrintScreen();
 				LogRegister.info("Atenção: A senha de 4 dígitos está cancelada.");

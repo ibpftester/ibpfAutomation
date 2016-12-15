@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import common.BreadWay;
+import common.BreadWayValidation;
 import common.LogRegister;
 import common.ScreenCapture;
 import parameters.Parameters;
@@ -55,11 +55,11 @@ public class AccLimitsAvailableForBuyAndSake {
 
 		try{
 			if (Parameters.controllerFailure == true){
-				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_0:_id64']", "Página Inicial");
-				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_1:_id71']", "Cartões");
-				BreadWay.ValidateBreadWayText(driver, "//*[@id='_id60_2:_id89']", "Consultas : Limites Disponíveis para Compra e Saque");
+				BreadWayValidation.ValidateBreadWayText(driver, "//*[@id='_id60_0:_id64']", "Página Inicial");
+				BreadWayValidation.ValidateBreadWayText(driver, "//*[@id='_id60_1:_id71']", "Cartões");
+				BreadWayValidation.ValidateBreadWayText(driver, "//*[@id='_id60_2:_id89']", "Consultas : Limites Disponíveis para Compra e Saque");
 
-				BreadWay.ValidateBreadWayAction(driver, "Cartões", "//*[@id='conteudo']/div[2]/div[1]/h2");
+				BreadWayValidation.ValidateBreadWayAction(driver, "Cartões", "//*[@id='conteudo']/div[2]/div[1]/h2");
 				SelectLimitsAvailableForBuyAndSake();
 			}
 		}
