@@ -3,9 +3,9 @@ package pages;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import common.LogRegister;
@@ -24,13 +24,22 @@ public class AccMenuCards {
 	@Test
 	public static void SelectMenuCards() throws Exception{
 
+		if(driver.findElements(By.className("botaoentretela")).size() != 0){		
+			WebElement messageIB = driver.findElement(By.xpath("//*[@id='entretela']/div[1]/div[2]/a/img"));
+			LogRegister.info("Clica na opção afirmando que não tem interesse na mensagem/produto apresentado.");
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", messageIB);
+		}
+
 		WebElement menuCards = driver.findElement(By.xpath("//a[@title='Cartões']"));
 
 		LogRegister.startTestCase();
 		LogRegister.info("Seleciona o menu 'Cartões'.");
-		menuCards.click();
-		driver.switchTo().frame(1);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", menuCards);
+		Thread.sleep(30000);
+		//driver.switchTo().frame(1);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
 		ScreenCapture.takePrintScreen();
 		
 		if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){

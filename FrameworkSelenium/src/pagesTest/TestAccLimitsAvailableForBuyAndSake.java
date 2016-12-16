@@ -5,6 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import common.LogRegister;
+import common.SpellChecker;
 import pages.AccLimitsAvailableForBuyAndSake;
 import pages.AccLogin;
 import pages.AccMenuCards;
@@ -22,6 +23,7 @@ public class TestAccLimitsAvailableForBuyAndSake {
 			AccLogin.InformPassword();
 			AccMenuCards.SelectTabMyCreditCards();
 			AccLimitsAvailableForBuyAndSake.SelectLimitsAvailableForBuyAndSake();
+			SpellChecker.ValidateWte(driver);
 			AccLimitsAvailableForBuyAndSake.ValidateBreadWay();
 		}
 		catch(Exception e){

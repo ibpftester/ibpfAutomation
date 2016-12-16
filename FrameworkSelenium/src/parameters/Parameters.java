@@ -21,8 +21,8 @@ public class Parameters {
 	
 	/* Dados de login de Correntista */
 	public static String agency = "3982";
-	public static String account = "6168";
-	public static String digitAccount = "9";
+	public static String account = "1115";
+	public static String digitAccount = "0";
 	public static String passwordCDigit1 = "1";
 	public static String passwordCDigit2 = "2";
 	public static String passwordCDigit3 = "1";
