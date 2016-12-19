@@ -109,7 +109,7 @@ public class AccLogin {
 					digit3PasswordButton.click();
 					LogRegister.info("Informa o dígito 4 da senha.");
 					digit4PasswordButton.click();
-					Thread.sleep(60000);
+					Thread.sleep(10000);
 
 					if(driver.findElement(By.tagName("body")).getText().contains("A Senha de 4 Dígitos não está correta")){
 						ScreenCapture.takePrintScreen();

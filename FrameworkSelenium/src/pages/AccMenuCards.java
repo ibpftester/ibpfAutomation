@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import common.LogRegister;
@@ -37,11 +38,9 @@ public class AccMenuCards {
 		LogRegister.info("Seleciona o menu 'Cartões'.");
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", menuCards);
-		Thread.sleep(30000);
-		//driver.switchTo().frame(1);
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
+		Thread.sleep(50000);
+		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='paginaCentral']")));
 		ScreenCapture.takePrintScreen();
-		
 		if(driver.findElement(By.tagName("body")).getText().contains("indisponível")){
 			ScreenCapture.takePrintScreen();
 			LogRegister.info("Atenção: O serviço do menu 'Cartões' está indisponível.");
@@ -57,7 +56,7 @@ public class AccMenuCards {
 				SelectMenuCards();
 
 				if (Parameters.controllerFailure == true){
-					WebElement tabMyCreditCards = driver.findElement(By.xpath("//a[@class='UITabs UItabs-header-tab tabindex pag98']"));
+					WebElement tabMyCreditCards = driver.findElement(By.partialLinkText("Meus Cartões de Crédito"));
 
 					LogRegister.info("Seleciona a aba 'Meus Cartões de Crédito'.");
 					tabMyCreditCards.click();
@@ -82,7 +81,7 @@ public class AccMenuCards {
 				SelectMenuCards();
 
 				if (Parameters.controllerFailure == true){
-					WebElement tabMyDebitCard = driver.findElement(By.xpath("//a[@class='UITabs UItabs-header-tab tabindex pag100']"));
+					WebElement tabMyDebitCard = driver.findElement(By.partialLinkText("Meu Cartão de Débito"));
 
 					LogRegister.info("Seleciona a aba 'Meus Cartão de Débito'.");
 					tabMyDebitCard.click();
@@ -107,7 +106,7 @@ public class AccMenuCards {
 				SelectMenuCards();
 
 				if (Parameters.controllerFailure == true){
-					WebElement tabBradescardCards = driver.findElement(By.xpath("//a[@class='UITabs UItabs-header-tab tabindex pag101']"));
+					WebElement tabBradescardCards = driver.findElement(By.partialLinkText("Cartões BradesCard"));
 
 					LogRegister.info("Seleciona a aba 'Cartões Bradescard'.");
 					tabBradescardCards.click();
@@ -132,8 +131,8 @@ public class AccMenuCards {
 				SelectMenuCards();
 	
 				if (Parameters.controllerFailure == true){
-					WebElement tabPreCompensa = driver.findElement(By.xpath("//a[@class='UITabs UItabs-header-tab tabindex pag99']"));
-	
+					WebElement tabPreCompensa = driver.findElement(By.partialLinkText("Pre.compensa"));
+
 					LogRegister.info("Seleciona a aba 'Pré Compensa'.");
 					tabPreCompensa.click();
 					Thread.sleep(3000);
@@ -141,7 +140,7 @@ public class AccMenuCards {
 			        LogRegister.endTestCase();
 				}
 			}
-	
+
 			catch(Exception e){
 				LogRegister.error("Eror:" + e.getMessage());
 				throw(e);
