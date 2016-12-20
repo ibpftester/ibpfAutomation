@@ -3,6 +3,7 @@ package pages;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +19,7 @@ public class AccLimitsAvailableForBuyAndSake {
 
 	static WebDriver driver = Parameters.driver;
 	static WebDriverWait wait = new WebDriverWait(driver, 300);
+	public static String valueUrl = "";
 
 	@Rule
 	public ScreenCaptureRule screenCapture = new ScreenCaptureRule();
@@ -41,6 +43,8 @@ public class AccLimitsAvailableForBuyAndSake {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='conteudo']/div[2]/div[1]/h2")));
 				}
 				ScreenCapture.takePrintScreen();
+				valueUrl = ((JavascriptExecutor) driver).executeScript("return window.location.href;").toString();
+				System.out.println(valueUrl);
 			}
 		}
 
