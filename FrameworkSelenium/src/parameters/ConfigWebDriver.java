@@ -20,11 +20,11 @@ public class ConfigWebDriver {
 			driver = new FirefoxDriver();
 			break;
 		case 1:
-			System.setProperty("webdriver.chrome.driver", Parameters.ieWebDriverPath);
+			System.setProperty("webdriver.chrome.driver", Parameters.chromeWebDriverPath);
 			driver = new ChromeDriver();
 			break;
 		case 2:
-			System.setProperty("webdriver.ie.driver", Parameters.chromeWebDriverPath);
+			System.setProperty("webdriver.ie.driver", Parameters.ieWebDriverPath);
 			driver = new InternetExplorerDriver();
 			break;
 		default:

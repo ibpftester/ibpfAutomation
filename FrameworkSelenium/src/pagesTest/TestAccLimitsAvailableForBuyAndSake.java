@@ -25,6 +25,8 @@ public class TestAccLimitsAvailableForBuyAndSake {
 			AccLimitsAvailableForBuyAndSake.SelectLimitsAvailableForBuyAndSake();
 			SpellChecker.ValidateWte(driver);
 			AccLimitsAvailableForBuyAndSake.ValidateBreadWay();
+			AccLimitsAvailableForBuyAndSake.ValidateText();
+			AccLimitsAvailableForBuyAndSake.ValidateBreadWay();
 		}
 		catch(Exception e){
 			LogRegister.error("Eror:" + e.getMessage());

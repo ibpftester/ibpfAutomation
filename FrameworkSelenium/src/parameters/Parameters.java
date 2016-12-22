@@ -7,11 +7,11 @@ public class Parameters {
 	public static boolean controllerFailure = true;
 	public static boolean controllerEnd = false;
 	
-	public static String ieWebDriverPath = "D:\\chromedriver.exe";
-	public static String chromeWebDriverPath = "D:\\IEDriverServer.exe";
+	public static String chromeWebDriverPath = "C:\\chromedriver.exe";
+	public static String ieWebDriverPath = "C:\\IEDriverServer.exe";
 	
-	public static String pathScreenshots = "D:\\Log\\";
-	public static String pathErrorScreenshots = "D:\\Log\\Erros\\";
+	public static String pathScreenshots = "C:\\Log\\";
+	public static String pathErrorScreenshots = "C:\\Log\\Erros\\";
 
 	public static String[] urlApplication = {"https://www.ib.bradesco.des.scopus.com.br/ibpflogin/login.htm", 
 		"https://www.ib.bradesco.des.scopus.com.br/ibpfnaocorrentistalogin/login.htm", 
