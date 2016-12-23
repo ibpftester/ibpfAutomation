@@ -85,7 +85,7 @@ public class AccLimitsAvailableForBuyAndSake {
 				ContentValidation.ValidateText(driver, "//*[@id='_id245']/div", "Limite por Cartão");
 				ContentValidation.ValidateText(driver, "//*[@id='_id245']", "Consulte o limite individual de cada cartão.");
 				AmexValidation.ValidateText(driver, "//*[@id='conteudo']/div[2]/div[3]/p/span[1]");
-				AmexValidation.ValidateAmexAction(driver, "//*[@id='link_ext']/a");
+				//AmexValidation.ValidateAmexAction(driver, "//*[@id='link_ext']/a");
 			}
 		}
 

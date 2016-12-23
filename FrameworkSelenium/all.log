@@ -1,5 +1,24 @@
-2016-12-22 14:37:44.964 [main] INFO  common.LogRegister - ****************************************************************************************
-2016-12-22 14:37:44.964 [main] INFO  common.LogRegister - $$$$$$$$$$$$$$$$$$$$$$           InformAccount           $$$$$$$$$$$$$$$$$$$$$$
-2016-12-22 14:37:44.964 [main] INFO  common.LogRegister - ****************************************************************************************
-2016-12-22 14:37:45.071 [main] ERROR common.LogRegister - Eror:null
-2016-12-22 14:37:45.071 [main] ERROR common.LogRegister - Eror:null
+2016-12-23 14:19:38.388 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-23 14:19:38.392 [main] INFO  common.LogRegister - $$$$$$$$$$$$$$$$$$$$$$           InformAccount           $$$$$$$$$$$$$$$$$$$$$$
+2016-12-23 14:19:38.392 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-23 14:19:38.647 [main] INFO  common.LogRegister - Informa agência.
+2016-12-23 14:19:38.941 [main] INFO  common.LogRegister - Informa número da conta.
+2016-12-23 14:19:39.099 [main] INFO  common.LogRegister - Informa dígito da conta.
+2016-12-23 14:19:39.375 [main] INFO  common.LogRegister - Clica no botão 'Entra'.
+2016-12-23 14:19:41.174 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-23 14:19:41.175 [main] INFO  common.LogRegister - XXXXXXXXXXXXXXXXXXXX              -E--N--D-              XXXXXXXXXXXXXXXXXXXX
+2016-12-23 14:19:41.175 [main] INFO  common.LogRegister - ****************************************************************************************
+2016-12-23 14:19:44.460 [main] ERROR common.LogRegister - Eror:Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'UBEW0107', ip: '192.168.125.2', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:27132/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: fc3996ea-321c-489a-a637-85d6f7968ada
+2016-12-23 14:19:44.461 [main] ERROR common.LogRegister - Eror:Unable to get browser (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'UBEW0107', ip: '192.168.125.2', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:27132/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: fc3996ea-321c-489a-a637-85d6f7968ada
